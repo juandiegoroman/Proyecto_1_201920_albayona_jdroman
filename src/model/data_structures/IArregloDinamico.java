@@ -2,6 +2,8 @@ package model.data_structures;
 
 public interface IArregloDinamico<T extends Comparable<T>> {
 
+	
+	
 	/**
 	 * Retornar el numero de elementos maximo en el arreglo
 	 * @return
