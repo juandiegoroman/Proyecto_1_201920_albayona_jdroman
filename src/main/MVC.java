@@ -1,5 +1,6 @@
 package main;
 import controller.Controller;
+import model.logic.MVCModelo;
 
 public class MVC {
 	
@@ -7,5 +8,7 @@ public class MVC {
 	{
 		Controller controler = new Controller();
 		controler.run();
+
+		MVCModelo m = new MVCModelo();
 	}
 }

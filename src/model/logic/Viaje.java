@@ -14,7 +14,7 @@ public class Viaje implements Comparable<Viaje>{
 
     private double promedioGeometrico;
 
-    private double desviaciónGeométrica;
+    private double desviacionGeometrica;
 
     public Viaje(int idOrigen, int idDestino, int mes, double tiempoPromedio, double desviacionEstandar, double promedioGeometrico, double desviaciónGeométrica) {
         this.idOrigen = idOrigen;
@@ -23,7 +23,7 @@ public class Viaje implements Comparable<Viaje>{
         this.tiempoPromedio = tiempoPromedio;
         this.desviacionEstandar = desviacionEstandar;
         this.promedioGeometrico = promedioGeometrico;
-        this.desviaciónGeométrica = desviaciónGeométrica;
+        this.desviacionGeometrica = desviaciónGeométrica;
     }
 
     public int compareTo(Viaje v){
