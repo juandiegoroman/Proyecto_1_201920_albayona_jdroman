@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dd510c9-920e-47c7-ac03-740485eac15f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/data_structures/IListaEncadenada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/opencsv_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/data_structures/ArregloDinamico.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/data_structures/GenericLinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/data_structures/IArregloDinamico.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/data_structures/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/data_structures/ListaEncadenada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/logic/MVCModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/logic/MVCModelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/logic/Viaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/logic/Viaje.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,8 +30,8 @@
       <file leaf-file-name="MVCModelo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/logic/MVCModelo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="195">
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#540#541#0" expanded="true" />
@@ -188,7 +176,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
@@ -337,12 +325,12 @@
       <option name="presentableId" value="Default" />
       <updated>1566244419707</updated>
       <workItem from="1566244423803" duration="61000" />
-      <workItem from="1566244596746" duration="5500000" />
+      <workItem from="1566244596746" duration="6067000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5561000" />
+    <option name="totallyTimeSpent" value="6128000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -508,8 +496,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/logic/MVCModelo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="195">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#540#541#0" expanded="true" />
