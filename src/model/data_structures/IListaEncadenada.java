@@ -1,5 +1,7 @@
 package model.data_structures;
 
+import java.util.Iterator;
+
 public interface IListaEncadenada<E>
 {
 
@@ -10,5 +12,5 @@ public interface IListaEncadenada<E>
 	int tamano();
 
 	boolean estaVacia();
-	
+
 }

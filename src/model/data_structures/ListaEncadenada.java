@@ -1,9 +1,11 @@
 package model.data_structures;
 
-public class ListaEncadenada<E> implements IListaEncadenada<E>, IIterable<E>
+public class ListaEncadenada<E> implements IListaEncadenada<E>, IListaIterable<E>
 {
 
 	private Nodo<E> primero;
+	private Nodo<E> ultimo;
+
 
 	private int tamano;
 
@@ -11,6 +13,7 @@ public class ListaEncadenada<E> implements IListaEncadenada<E>, IIterable<E>
 	public void insertarPrimero(E valor) {
 		if (estaVacia()){
 			primero = new Nodo(valor,null);
+			ultimo = primero;
 		}
 
 		else {
@@ -24,16 +27,17 @@ public class ListaEncadenada<E> implements IListaEncadenada<E>, IIterable<E>
 	@Override
 	public void insertarFinal(E valor) {
 		if (estaVacia()){
-			primero = new Nodo(valor,null);
+			ultimo = new Nodo(valor,null);
+			primero = ultimo;
 		}
 		else {
 
-			Nodo<E> actual = primero;
-			while (actual.tieneSiguiente()){
-				actual = actual.siguiente();
-			}
+			Nodo<E> temp = ultimo;
 
-			actual.cambiarSiguiente(new Nodo<E>(valor,null));
+			ultimo = new Nodo(valor, null);
+
+			temp.cambiarSiguiente(ultimo);
+
 		}
 
 		tamano++;
@@ -52,7 +56,7 @@ public class ListaEncadenada<E> implements IListaEncadenada<E>, IIterable<E>
 
 
 
-	private class ListaIterador implements IIterador<E> {
+	private class ListaIterador implements IListaIterador<E> {
 
 		private Nodo<E> actual;
 
@@ -68,19 +72,23 @@ public class ListaEncadenada<E> implements IListaEncadenada<E>, IIterable<E>
 				actual = primero;
 			}
 
-			actual = actual.siguiente();
+			else {
+
+				actual = actual.siguiente();
+
+			}
 
 			return actual.valor();
 		}
 
-		public  boolean tieneSiguiente(){
+		public  boolean haySiguiente(){
 
-		return 	actual.tieneSiguiente();
+		return 	actual.haySiguiente();
 		}
 
 	}
 	
-	public IIterador<E> darIteradore() 
+	public IListaIterador<E> iterador()
 	{
 		return new ListaIterador();
 	}

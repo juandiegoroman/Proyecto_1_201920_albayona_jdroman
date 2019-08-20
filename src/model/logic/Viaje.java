@@ -35,7 +35,33 @@ public class Viaje implements Comparable<Viaje>{
     {
     	return idOrigen;
     }
+
+    public int darIdDestino() {
+        return idDestino;
+    }
+
+    public double darTiempoPromedio() {
+        return tiempoPromedio;
+    }
+
+    public double darDesviacionEstandar() {
+        return desviacionEstandar;
+    }
+
+    public double darPromedioGeometrico() {
+        return promedioGeometrico;
+    }
+
+    public double darDesviacionGeometrica() {
+        return desviacionGeometrica;
+    }
+
     public int compareTo(Viaje v){
         return 0;
+    }
+
+    public String toString(){
+
+        return "" + idOrigen;
     }
 }

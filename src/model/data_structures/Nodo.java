@@ -24,7 +24,7 @@ public class Nodo<E> {
         siguiente = nodo;
     }
 
-    public boolean tieneSiguiente(){
+    public boolean haySiguiente(){
 
         return siguiente != null;
     }
