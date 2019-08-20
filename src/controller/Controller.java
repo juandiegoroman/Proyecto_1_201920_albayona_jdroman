@@ -1,8 +1,10 @@
 package controller;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 import model.data_structures.IListaIterador;
+import model.data_structures.ListaEncadenada;
 import model.logic.MVCModelo;
 import model.logic.Viaje;
 import view.MVCView;
@@ -67,43 +69,33 @@ public class Controller {
 				case 2:
 
 					System.out.println("--------- \nIngresar mes de consulta: ");
-
-					try {
-						mesConsulta = lector.nextInt();
-					}
-					catch (Exception e){
-						System.out.println("Debe ingresar un numero del 1 al 4");
-					}
-
-
+					mesConsulta = lector.nextInt();
 					System.out.println("--------- \nIngresar zona de origen de consulta: ");
-
-					try {
-						zonaOrigenConsulta = lector.nextInt();
-					}
-					catch (Exception e){
-						System.out.println("Debe ingresar un numero del 1 al 4");
-					}
-
+					zonaOrigenConsulta = lector.nextInt();
+					
 
 					break;
 
 				case 3:
 
 					try {
-						IListaIterador<Viaje> iter = modelo.darListaViajesPorMesYOrigen(mesConsulta, zonaOrigenConsulta).iterador();
+						
+						ListaEncadenada<Viaje> lista = modelo.darListaViajesPorMesYOrigen(mesConsulta, zonaOrigenConsulta);
+						IListaIterador<Viaje> iter = lista.iterador();
 						Viaje actual = iter.siguiente();
 
-						System.out.println("-----------------------------------------------------------------------------");
-						System.out.printf("%10s %10s  %20s  %20s", "Origen", "Destino", "Tiempo promedio", "Desviaci√≥n est√°ndar");
-						System.out.println();
-						System.out.println("-----------------------------------------------------------------------------");
 
+						if (lista.tamano() == 0) {
 
-						if (actual == null) {
-
-							System.out.println("No se encontraron resultados con los parametros dados");
+							System.out.println("No se encontraron resultados con los par·metros dados");
+							
 						} else {
+							System.out.println("-----------------------------------------------------------------------------");
+							System.out.printf("%10s %10s  %20s  %20s", "Origen", "Destino", "Tiempo promedio", "DesviaciÛn est·ndar");
+							System.out.println();
+							System.out.println("-----------------------------------------------------------------------------");
+
+					
 							while (iter.haySiguiente()) {
 								actual = iter.siguiente();
 								System.out.format("%10s %10s  %20s  %20s", actual.darIdOrigen(), actual.darIdDestino(), actual.darTiempoPromedio(), actual.darDesviacionEstandar());
@@ -126,8 +118,10 @@ public class Controller {
 						int totalPorMes = modelo.totalViajesPorMes(mesConsulta);
 						int totalPorOrigen = modelo.totalViajesPorOrigen(zonaOrigenConsulta);
 
-						double porcentaje1 = Math.round((double)totalPorMes / (double) totalViajes * 100);
-						double porcentaje2 = Math.round((double)totalPorOrigen / (double) totalViajes * 100);
+						DecimalFormat d = new DecimalFormat("0.00");
+						
+						String porcentaje1 = d.format(((double)totalPorMes / (double) totalViajes) * 100.00) + " %";
+						String porcentaje2 = d.format(((double)totalPorOrigen / (double) totalViajes) * 100.00) + " %";
 
 						System.out.println("El total de viajes reportados en el semestre: " + totalViajes);
 						System.out.println("El total de viajes reportados para el mes de consulta: " + totalPorMes);

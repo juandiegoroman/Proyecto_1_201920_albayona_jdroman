@@ -4,11 +4,15 @@ public class ListaEncadenada<E> implements IListaEncadenada<E>, IListaIterable<E
 {
 
 	private Nodo<E> primero;
+	
 	private Nodo<E> ultimo;
-
-
+	
 	private int tamano;
 
+	public ListaEncadenada() {
+		tamano = 0;
+	}
+	
 	@Override
 	public void insertarPrimero(E valor) {
 		if (estaVacia()){
