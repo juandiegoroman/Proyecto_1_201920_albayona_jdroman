@@ -1,6 +1,6 @@
 package model.data_structures;
 
-public class ListaEncadenada<E> implements IListaEncadenada<E>
+public class ListaEncadenada<E> implements IListaEncadenada<E>, IIterable<E>
 {
 
 	private Nodo<E> primero;
@@ -78,6 +78,11 @@ public class ListaEncadenada<E> implements IListaEncadenada<E>
 		return 	actual.tieneSiguiente();
 		}
 
+	}
+	
+	public IIterador<E> darIteradore() 
+	{
+		return new ListaIterador();
 	}
 
 }

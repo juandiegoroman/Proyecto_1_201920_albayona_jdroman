@@ -1,6 +1,8 @@
 package model.logic;
 
 import com.opencsv.CSVReader;
+
+import model.data_structures.IIterador;
 import model.data_structures.ListaEncadenada;
 
 
@@ -28,7 +30,45 @@ public class MVCModelo {
 	{
 		datos = new ListaEncadenada();
 	}
-
+	
+	public int totalViajesReportados()
+	{
+		return datos.tamano();
+	}
+	
+	public int totalViajesPorMes(int Mes)
+	{
+		int total = 0;
+		IIterador<Viaje> iter = datos.darIteradore();
+		Viaje actual = iter.siguiente();
+		while(iter.tieneSiguiente())
+		{
+			if(actual.darMes() == Mes)
+			{
+				total++;
+			}
+		}
+		return total;
+	}
+	
+	public String cantidadYPorcentaje(int Mes, int Origen)
+	{
+		double promedio = 0;
+		int cantReq = 0;
+		int total = 0;
+		IIterador<Viaje> iter = datos.darIteradore();
+		Viaje actual = iter.siguiente();
+		while(iter.tieneSiguiente())
+		{
+			if(actual.darMes() == Mes && actual.darIdOrigen() == Origen)
+			{
+				cantReq++;
+			}
+			total++;
+		}
+		promedio = (cantReq/total)*100;
+		return "La cantidad de viajes reportados por el mes y la zona de origen de consultaes:"+cantReq+"y su respectuvo porcentaje con respecto al total de viajes del mes es:"+promedio;
+	}
 
 	/**
 	 * Requerimiento de agregar dato
