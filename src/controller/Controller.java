@@ -132,12 +132,10 @@ public class Controller {
 					}
 					catch (Exception e){
 						mensajeError();
+						
+						e.printStackTrace();
 					}
-
-
-
 			}
-
 		}
 	}
 
