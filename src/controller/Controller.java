@@ -22,9 +22,7 @@ public class Controller {
 	/* Instancia de la Vista*/
 	private MVCView view;
 
-	private int mesConsulta;
 
-	private int zonaOrigenConsulta;
 	
 	/**
 	 * Crear la vista y el modelo del proyecto
@@ -43,6 +41,10 @@ public class Controller {
 		boolean fin = false;
 		String dato = "";
 		String respuesta = "";
+		
+		 int mesConsulta = -1;
+
+		 int zonaOrigenConsulta = -1;
 
 
 
@@ -68,18 +70,34 @@ public class Controller {
 
 				case 2:
 
+					
+					try {
 					System.out.println("--------- \nIngresar mes de consulta: ");
 					mesConsulta = lector.nextInt();
 					System.out.println("--------- \nIngresar zona de origen de consulta: ");
 					zonaOrigenConsulta = lector.nextInt();
-					
-
+					}
+					catch(Exception e) {
+						
+						System.out.print("Debe ingresar un número");
+					}
+							
 					break;
 
 				case 3:
 
-					try {
+					if(modelo.darDatos().tamano() == 0) {
 						
+						System.out.print("Aún no se han cargado los datos.");
+					}
+					
+					else if(mesConsulta == -1 || zonaOrigenConsulta == -1) {
+						System.out.print("Debe ingresar datos de consulta.");
+						
+					
+					}
+					
+					else {
 						ListaEncadenada<Viaje> lista = modelo.darListaViajesPorMesYOrigen(mesConsulta, zonaOrigenConsulta);
 						IListaIterador<Viaje> iter = lista.iterador();
 						Viaje actual = iter.siguiente();
@@ -104,11 +122,7 @@ public class Controller {
 							System.out.println();
 						}
 					}
-
-					catch (Exception e){
-						mensajeError();
-					}
-
+				
 					break;
 
 				case 4:
