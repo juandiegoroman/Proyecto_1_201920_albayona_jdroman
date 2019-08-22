@@ -88,9 +88,5 @@ public class TestListaEncadenada {
 		lista.eliminar(0);
 		assertEquals(9, lista.tamano());
 		assertEquals("1", lista.buscar(0));
-		
-
 	}
-	
-	
 }
