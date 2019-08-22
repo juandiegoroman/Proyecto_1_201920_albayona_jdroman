@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dd510c9-920e-47c7-ac03-740485eac15f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/t1T1_201920/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/t1T1_201920/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/t1T1_201920/main/MVC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/t1T1_201920/main/MVC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/t1T1_201920/model/data_structures/IListaEncadenada.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/t1T1_201920/model/data_structures/IListaEncadenada.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/t1T1_201920/model/data_structures/ListaEncadenada$ListaIterador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/t1T1_201920/model/data_structures/ListaEncadenada$ListaIterador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/t1T1_201920/model/data_structures/ListaEncadenada.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/t1T1_201920/model/data_structures/ListaEncadenada.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/t1T1_201920/model/data_structures/Nodo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/t1T1_201920/model/data_structures/Nodo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/t1T1_201920/view/MVCView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/t1T1_201920/view/MVCView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MVC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MVC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/data_structures/IListaEncadenada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/data_structures/IListaEncadenada.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/data_structures/ListaEncadenada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/data_structures/ListaEncadenada.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/data_structures/Nodo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/data_structures/Nodo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test/data_structures/TestArregloDinamico.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/data_structures/TestListaEncadenada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/logic/MVCModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/logic/MVCModelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test/data_structures/TestListaEncadenada.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/data_structures/TestListaEncadenada.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,42 +19,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Viaje.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/logic/Viaje.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="e#874#875#0" expanded="true" />
-                <element signature="e#902#903#0" expanded="true" />
-                <element signature="e#935#936#0" expanded="true" />
-                <element signature="e#967#968#0" expanded="true" />
-                <element signature="e#1008#1009#0" expanded="true" />
-                <element signature="e#1045#1046#0" expanded="true" />
-                <element signature="e#1090#1091#0" expanded="true" />
-                <element signature="e#1131#1132#0" expanded="true" />
-                <element signature="e#1176#1177#0" expanded="true" />
-                <element signature="e#1217#1218#0" expanded="true" />
-                <element signature="e#1264#1265#0" expanded="true" />
-                <element signature="e#1307#1308#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MVCModelo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/logic/MVCModelo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-              <folding>
-                <element signature="e#517#518#0" expanded="true" />
-                <element signature="e#553#554#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="IListaIterador.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/data_structures/IListaIterador.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,24 +28,199 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MVC.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/MVC.java">
+      <file leaf-file-name="MVCModelo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/logic/MVCModelo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+            <state relative-caret-position="310">
+              <caret line="126" column="40" selection-start-line="126" selection-start-column="40" selection-end-line="126" selection-end-column="40" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#287#295#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#553#554#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestListaEncadenada.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test/data_structures/TestListaEncadenada.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="28" lean-forward="true" selection-end-line="75" />
+      <file leaf-file-name="JAVA/" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="0.0" y="0.0">controller</node>
+                <node x="148.0" y="222.0">test</node>
+                <node x="0.0" y="148.0">main</node>
+                <node x="0.0" y="222.0">view</node>
+                <node x="0.0" y="74.0">model</node>
+              </nodes>
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="1.0" x="-78.5" y="151.5" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Methods</Category>
+                <Category>Properties</Category>
+                <Category>Fields</Category>
+                <Category>Constructors</Category>
+              </Categories>
+              <SCOPE>Project Files</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JavaScript-modules-diagram/C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/controller;C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/main;C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/model;C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/view;" pinned="false" current-in-tab="false">
+        <entry file="uml://JavaScript-modules-diagram/C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/controller;C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/main;C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/model;C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/view;">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JavaScript-modules-diagram</ID>
+              <OriginalElement>$PROJECT_DIR$/src/controller;C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/main;C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/model;C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/view;</OriginalElement>
+              <nodes />
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="1.0" x="240.0" y="240.0" />
+              <SelectedNodes />
+              <Categories>
+                <Category>All</Category>
+              </Categories>
+              <VISIBILITY>Details</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JAVA/model" pinned="false" current-in-tab="true">
+        <entry file="uml://JAVA/model">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>model</OriginalElement>
+              <nodes>
+                <node x="391.3621031746031" y="56.0">model.data_structures.IListaIterador</node>
+                <node x="766.8125" y="466.0">model.logic.Viaje</node>
+                <node x="0.0" y="0.0">model.data_structures.Nodo</node>
+                <node x="555.8125" y="235.0">model.data_structures.IListaEncadenada</node>
+                <node x="320.8125" y="290.0">model.data_structures.IListaIterable</node>
+                <node x="106.44175170068024" y="532.0">model.data_structures.ListaEncadenada</node>
+                <node x="557.3125" y="931.0">model.logic.MVCModelo</node>
+                <node x="108.8125" y="256.0">model.data_structures.ListaEncadenada.ListaIterador</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="model.data_structures.ListaEncadenada" target="model.data_structures.ListaEncadenada.ListaIterador">
+                  <point x="-23.77777777777777" y="-136.5" />
+                  <point x="189.66397392290247" y="416.0" />
+                  <point x="140.8125" y="416.0" />
+                  <point x="-64.0" y="59.5" />
+                </edge>
+                <edge source="model.logic.MVCModelo" target="model.data_structures.IListaIterador">
+                  <point x="0.0" y="-125.5" />
+                  <point x="756.3125" y="210.0" />
+                  <point x="559.3621031746031" y="210.0" />
+                  <point x="72.0" y="36.5" />
+                </edge>
+                <edge source="model.logic.MVCModelo" target="model.logic.Viaje">
+                  <point x="56.857142857142776" y="-125.5" />
+                  <point x="813.1696428571428" y="911.0" />
+                  <point x="821.9791666666665" y="911.0" />
+                  <point x="-110.33333333333337" y="202.5" />
+                </edge>
+                <edge source="model.data_structures.ListaEncadenada" target="model.data_structures.IListaIterador">
+                  <point x="71.33333333333331" y="-136.5" />
+                  <point x="284.77508503401356" y="436.0" />
+                  <point x="545.3125" y="436.0" />
+                  <point x="545.3125" y="210.0" />
+                  <point x="511.36210317460313" y="210.0" />
+                  <point x="24.000000000000007" y="36.5" />
+                </edge>
+                <edge source="model.data_structures.ListaEncadenada" target="model.data_structures.IListaIterable">
+                  <point x="47.55555555555554" y="-136.5" />
+                  <point x="260.9973072562358" y="426.0" />
+                  <point x="427.8125" y="426.0" />
+                  <point x="0.0" y="25.5" />
+                </edge>
+                <edge source="model.data_structures.ListaEncadenada.ListaIterador" target="model.data_structures.ListaEncadenada">
+                  <point x="0.0" y="59.5" />
+                  <point x="204.8125" y="446.0" />
+                  <point x="213.44175170068024" y="446.0" />
+                  <point x="0.0" y="-136.5" />
+                </edge>
+                <edge source="model.logic.MVCModelo" target="model.data_structures.ListaEncadenada">
+                  <point x="-113.71428571428567" y="-125.5" />
+                  <point x="642.5982142857143" y="901.0" />
+                  <point x="213.44175170068024" y="901.0" />
+                  <point x="0.0" y="136.5" />
+                </edge>
+                <edge source="model.data_structures.ListaEncadenada.ListaIterador" target="model.data_structures.IListaIterador">
+                  <point x="48.0" y="-59.5" />
+                  <point x="252.8125" y="210.0" />
+                  <point x="415.3621031746031" y="210.0" />
+                  <point x="-72.0" y="36.5" />
+                </edge>
+                <edge source="model.data_structures.IListaIterable" target="model.data_structures.IListaIterador">
+                  <point x="0.0" y="-25.5" />
+                  <point x="427.8125" y="210.0" />
+                  <point x="463.3621031746031" y="210.0" />
+                  <point x="-24.0" y="36.5" />
+                </edge>
+                <edge source="model.data_structures.ListaEncadenada.ListaIterador" target="model.data_structures.Nodo">
+                  <point x="-48.0" y="-59.5" />
+                  <point x="156.8125" y="210.0" />
+                  <point x="170.625" y="210.0" />
+                  <point x="73.125" y="92.5" />
+                </edge>
+                <edge source="model.data_structures.ListaEncadenada" target="model.data_structures.Nodo">
+                  <point x="-47.55555555555554" y="-136.5" />
+                  <point x="165.8861961451247" y="426.0" />
+                  <point x="79.25" y="426.0" />
+                  <point x="79.25" y="210.0" />
+                  <point x="121.875" y="210.0" />
+                  <point x="24.375" y="92.5" />
+                </edge>
+                <edge source="model.data_structures.ListaEncadenada" target="model.data_structures.IListaEncadenada">
+                  <point x="95.11111111111109" y="-136.5" />
+                  <point x="308.55286281179133" y="446.0" />
+                  <point x="650.8125" y="446.0" />
+                  <point x="0.0" y="80.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.5407653910149749" x="639.2060471431014" y="604.0000000000001" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+                <Category>Properties</Category>
+                <Category>Inner Classes</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JAVA/controller" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/controller">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>controller</OriginalElement>
+              <nodes>
+                <node x="0.0" y="0.0">controller.Controller</node>
+              </nodes>
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="1.0" x="-259.0" y="-70.5" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Properties</Category>
+                <Category>Inner Classes</Category>
+                <Category>Methods</Category>
+                <Category>Fields</Category>
+                <Category>Constructors</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -96,8 +228,17 @@
       <file leaf-file-name="IListaEncadenada.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/data_structures/IListaEncadenada.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="8" />
+            <state relative-caret-position="45">
+              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Nodo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/data_structures/Nodo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -105,35 +246,17 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2070">
-              <caret line="145" selection-start-line="145" selection-end-line="145" />
+            <state relative-caret-position="445">
+              <caret line="143" selection-start-line="143" selection-end-line="143" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MVCView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/MVCView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListaEncadenada.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ListaEncadenada.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/data_structures/ListaEncadenada.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="79" column="18" lean-forward="true" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestMVCModelo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test/logic/TestMVCModelo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+            <state relative-caret-position="90">
+              <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -170,15 +293,15 @@
         <option value="$PROJECT_DIR$/test/test/logic/TestMVCModelo.java" />
         <option value="$PROJECT_DIR$/src/model/data_structures/IIterador.java" />
         <option value="$PROJECT_DIR$/src/model/data_structures/IListaIterador.java" />
-        <option value="$PROJECT_DIR$/src/model/data_structures/IListaEncadenada.java" />
         <option value="$PROJECT_DIR$/src/model/data_structures/IListaIterable.java" />
         <option value="$PROJECT_DIR$/src/model/logic/Viaje.java" />
-        <option value="$PROJECT_DIR$/src/model/logic/MVCModelo.java" />
         <option value="$PROJECT_DIR$/src/view/MVCView.java" />
-        <option value="$PROJECT_DIR$/src/controller/Controller.java" />
         <option value="$PROJECT_DIR$/test/test/data_structures/TestListaEncadenada.java" />
         <option value="$PROJECT_DIR$/src/main/MVC.java" />
         <option value="$PROJECT_DIR$/src/model/data_structures/ListaEncadenada.java" />
+        <option value="$PROJECT_DIR$/src/model/data_structures/IListaEncadenada.java" />
+        <option value="$PROJECT_DIR$/src/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/model/logic/MVCModelo.java" />
       </list>
     </option>
   </component>
@@ -204,9 +327,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -223,37 +345,39 @@
               <item name="T1_201920" type="b2602c69:ProjectViewProjectNode" />
               <item name="T1_201920" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="T1_201920" type="b2602c69:ProjectViewProjectNode" />
               <item name="T1_201920" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="data_structures" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="T1_201920" type="b2602c69:ProjectViewProjectNode" />
               <item name="T1_201920" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="T1_201920" type="b2602c69:ProjectViewProjectNode" />
-              <item name="T1_201920" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="logic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="T1_201920" type="b2602c69:ProjectViewProjectNode" />
+              <item name="T1_201920" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -346,11 +470,12 @@
       <workItem from="1566244596746" duration="7233000" />
       <workItem from="1566276370392" duration="78000" />
       <workItem from="1566429286607" duration="692000" />
+      <workItem from="1566444064526" duration="1637000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21019000" />
+    <option name="totallyTimeSpent" value="22656000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -358,32 +483,32 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32905984" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32905984" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25973153" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26308724" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5099715" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5099715" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32905984" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,13 +522,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/model/logic/MVCModelo.java</url>
-          <line>28</line>
+          <line>26</line>
           <properties />
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/model/data_structures/ListaEncadenada.java</url>
-          <line>87</line>
+          <line>85</line>
           <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
@@ -421,7 +546,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/MVC.java</url>
-          <line>28</line>
+          <line>13</line>
           <properties />
           <option name="timeStamp" value="50" />
         </line-breakpoint>
@@ -433,13 +558,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/model/logic/MVCModelo.java</url>
-          <line>21</line>
+          <line>20</line>
           <properties field="datos" class="model.logic.MVCModelo" />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/model/data_structures/ListaEncadenada.java</url>
-          <line>70</line>
+          <line>68</line>
           <properties class="model.data_structures.ListaEncadenada">
             <option name="EMULATED" value="true" />
           </properties>
@@ -450,32 +575,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/data_structures/IListaIterador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/MVC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#287#295#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test/data_structures/TestArregloDinamico.java" />
-    <entry file="file://$PROJECT_DIR$/test/test/logic/TestMVCModelo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/data_structures/IListaEncadenada.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -597,7 +696,6 @@
           <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#287#295#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -699,13 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/data_structures/IListaIterable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Downloads/opencsv-4.0.jar!/com/opencsv/CSVIterator.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -713,35 +804,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/data_structures/Nodo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3135">
           <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
-          <folding>
-            <element signature="e#10065#10066#0" expanded="true" />
-            <element signature="e#10148#10149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/data_structures/IListaIterador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/data_structures/IListaEncadenada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -766,17 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/logic/MVCModelo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-          <folding>
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/MVCView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -784,42 +839,256 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="145" selection-start-line="145" selection-end-line="145" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test/data_structures/TestListaEncadenada.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="28" lean-forward="true" selection-end-line="75" />
+          <caret line="20" column="28" selection-end-line="92" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test/logic/TestMVCModelo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        <state relative-caret-position="405">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/MVC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+        <state relative-caret-position="195">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#287#295#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/data_structures/IListaIterable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/data_structures/IListaIterador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/data_structures/IListaEncadenada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/data_structures/Nodo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/data_structures/ListaEncadenada.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="79" column="18" lean-forward="true" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+        <state relative-caret-position="90">
+          <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="143" selection-start-line="143" selection-end-line="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/logic/MVCModelo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="126" column="40" selection-start-line="126" selection-start-column="40" selection-end-line="126" selection-end-column="40" />
+          <folding>
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="0.0" y="0.0">controller</node>
+            <node x="148.0" y="222.0">test</node>
+            <node x="0.0" y="148.0">main</node>
+            <node x="0.0" y="222.0">view</node>
+            <node x="0.0" y="74.0">model</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-78.5" y="151.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+          </Categories>
+          <SCOPE>Project Files</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/controller">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>controller</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">controller.Controller</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-259.0" y="-70.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+            <Category>Methods</Category>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/controller;C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/main;C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/model;C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/view;">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/controller;C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/main;C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/model;C:/Users/andre/OneDrive - Universidad de los andes/2019-02/Estructuras de datos/t1/T1_201920/src/view;</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="240.0" y="240.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/model">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>model</OriginalElement>
+          <nodes>
+            <node x="391.3621031746031" y="56.0">model.data_structures.IListaIterador</node>
+            <node x="766.8125" y="466.0">model.logic.Viaje</node>
+            <node x="0.0" y="0.0">model.data_structures.Nodo</node>
+            <node x="555.8125" y="235.0">model.data_structures.IListaEncadenada</node>
+            <node x="320.8125" y="290.0">model.data_structures.IListaIterable</node>
+            <node x="106.44175170068024" y="532.0">model.data_structures.ListaEncadenada</node>
+            <node x="557.3125" y="931.0">model.logic.MVCModelo</node>
+            <node x="108.8125" y="256.0">model.data_structures.ListaEncadenada.ListaIterador</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="model.data_structures.ListaEncadenada" target="model.data_structures.ListaEncadenada.ListaIterador">
+              <point x="-23.77777777777777" y="-136.5" />
+              <point x="189.66397392290247" y="416.0" />
+              <point x="140.8125" y="416.0" />
+              <point x="-64.0" y="59.5" />
+            </edge>
+            <edge source="model.logic.MVCModelo" target="model.data_structures.IListaIterador">
+              <point x="0.0" y="-125.5" />
+              <point x="756.3125" y="210.0" />
+              <point x="559.3621031746031" y="210.0" />
+              <point x="72.0" y="36.5" />
+            </edge>
+            <edge source="model.logic.MVCModelo" target="model.logic.Viaje">
+              <point x="56.857142857142776" y="-125.5" />
+              <point x="813.1696428571428" y="911.0" />
+              <point x="821.9791666666665" y="911.0" />
+              <point x="-110.33333333333337" y="202.5" />
+            </edge>
+            <edge source="model.data_structures.ListaEncadenada" target="model.data_structures.IListaIterador">
+              <point x="71.33333333333331" y="-136.5" />
+              <point x="284.77508503401356" y="436.0" />
+              <point x="545.3125" y="436.0" />
+              <point x="545.3125" y="210.0" />
+              <point x="511.36210317460313" y="210.0" />
+              <point x="24.000000000000007" y="36.5" />
+            </edge>
+            <edge source="model.data_structures.ListaEncadenada" target="model.data_structures.IListaIterable">
+              <point x="47.55555555555554" y="-136.5" />
+              <point x="260.9973072562358" y="426.0" />
+              <point x="427.8125" y="426.0" />
+              <point x="0.0" y="25.5" />
+            </edge>
+            <edge source="model.data_structures.ListaEncadenada.ListaIterador" target="model.data_structures.ListaEncadenada">
+              <point x="0.0" y="59.5" />
+              <point x="204.8125" y="446.0" />
+              <point x="213.44175170068024" y="446.0" />
+              <point x="0.0" y="-136.5" />
+            </edge>
+            <edge source="model.logic.MVCModelo" target="model.data_structures.ListaEncadenada">
+              <point x="-113.71428571428567" y="-125.5" />
+              <point x="642.5982142857143" y="901.0" />
+              <point x="213.44175170068024" y="901.0" />
+              <point x="0.0" y="136.5" />
+            </edge>
+            <edge source="model.data_structures.ListaEncadenada.ListaIterador" target="model.data_structures.IListaIterador">
+              <point x="48.0" y="-59.5" />
+              <point x="252.8125" y="210.0" />
+              <point x="415.3621031746031" y="210.0" />
+              <point x="-72.0" y="36.5" />
+            </edge>
+            <edge source="model.data_structures.IListaIterable" target="model.data_structures.IListaIterador">
+              <point x="0.0" y="-25.5" />
+              <point x="427.8125" y="210.0" />
+              <point x="463.3621031746031" y="210.0" />
+              <point x="-24.0" y="36.5" />
+            </edge>
+            <edge source="model.data_structures.ListaEncadenada.ListaIterador" target="model.data_structures.Nodo">
+              <point x="-48.0" y="-59.5" />
+              <point x="156.8125" y="210.0" />
+              <point x="170.625" y="210.0" />
+              <point x="73.125" y="92.5" />
+            </edge>
+            <edge source="model.data_structures.ListaEncadenada" target="model.data_structures.Nodo">
+              <point x="-47.55555555555554" y="-136.5" />
+              <point x="165.8861961451247" y="426.0" />
+              <point x="79.25" y="426.0" />
+              <point x="79.25" y="210.0" />
+              <point x="121.875" y="210.0" />
+              <point x="24.375" y="92.5" />
+            </edge>
+            <edge source="model.data_structures.ListaEncadenada" target="model.data_structures.IListaEncadenada">
+              <point x="95.11111111111109" y="-136.5" />
+              <point x="308.55286281179133" y="446.0" />
+              <point x="650.8125" y="446.0" />
+              <point x="0.0" y="80.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.5407653910149749" x="639.2060471431014" y="604.0000000000001" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
