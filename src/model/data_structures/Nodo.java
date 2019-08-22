@@ -20,14 +20,19 @@ public class Nodo<E> {
         return valor;
     }
 
-    public void insertar(Nodo<E> nodo) {
+    public void insertar(Nodo<E> nodo){
         siguiente = nodo;
     }
 
-    public boolean haySiguiente() {
+    public boolean haySiguiente(){
 
         return siguiente != null;
     }
+
+
+
+
+
 
 
 }
