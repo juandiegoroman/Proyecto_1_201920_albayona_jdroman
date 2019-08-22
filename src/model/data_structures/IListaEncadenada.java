@@ -1,20 +1,18 @@
 package model.data_structures;
 
-import java.util.Iterator;
 
-public interface IListaEncadenada<E>
-{
+public interface IListaEncadenada<E> {
 
-	void insertarPrimero(E valor);
+    void insertarPrimero(E valor);
 
-	void insertarFinal(E valor);
-	
-	E buscar(int indice) throws Exception;
-	
-	E eliminar(int indice) throws Exception;
+    void insertarFinal(E valor);
 
-	int tamano();
+    E buscar(int indice) throws Exception;
 
-	boolean estaVacia();
+    E eliminar(int indice) throws Exception;
+
+    int tamano();
+
+    boolean estaVacia();
 
 }

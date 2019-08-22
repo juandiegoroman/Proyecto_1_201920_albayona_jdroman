@@ -13,41 +13,45 @@ import java.util.Iterator;
 
 /**
  * Definicion del modelo del mundo
- *
  */
 public class MVCModelo {
-	/**
-	 * Atributos del modelo del mundo
-	 */
-	private ListaEncadenada<Viaje> datos;
+    /**
+     * Atributos del modelo del mundo
+     */
+    private ListaEncadenada<Viaje> datos;
 
-	/**
-	 * Constructor del modelo del mundo con capacidad predefinida
-	 */
-	public MVCModelo()
-	{
-		datos = new ListaEncadenada();
-	}
-	
-	public int totalViajesReportados()
-	{
-		return datos.tamano();
-	}
-	
+    /**
+     * Constructor del modelo del mundo con capacidad predefinida
+     */
+    public MVCModelo() {
+        datos = new ListaEncadenada();
+    }
 
-    public int totalViajesPorMes(int mes)
-    {
+    public int totalViajesReportados() {
+        return datos.tamano();
+    }
+
+
+    public int totalViajesPorMes(int mes) {
 
         IListaIterador<Viaje> iter = datos.iterador();
 
         Viaje actual = null;
 
         int total = 0;
+<<<<<<< HEAD
         while(iter.haySiguiente())
         {   
         	actual = iter.siguiente();
             if (actual.darMes() == mes){
               total++;
+=======
+        while (iter.haySiguiente()) {
+            actual = iter.siguiente();
+
+            if (actual.darMes() == mes) {
+                total++;
+>>>>>>> 7b3d5e79645560ad7870a9f63c8b6abd0de9fe97
             }
             
            
@@ -57,19 +61,17 @@ public class MVCModelo {
 
     }
 
-    public int totalViajesPorOrigen(int origen)
-    {
+    public int totalViajesPorOrigen(int origen) {
 
         IListaIterador<Viaje> iter = datos.iterador();
 
         Viaje actual = null;
         
         int total = 0;
-        while(iter.haySiguiente())
-        {
+        while (iter.haySiguiente()) {
             actual = iter.siguiente();
 
-            if (actual.darIdOrigen() == origen){
+            if (actual.darIdOrigen() == origen) {
                 total++;
             }
         }
@@ -77,20 +79,18 @@ public class MVCModelo {
 
     }
 
-    public ListaEncadenada<Viaje> darListaViajesPorMesYOrigen(int mes, int origen)
-    {
+    public ListaEncadenada<Viaje> darListaViajesPorMesYOrigen(int mes, int origen) {
 
-        ListaEncadenada<Viaje> lista =  new ListaEncadenada<>();
+        ListaEncadenada<Viaje> lista = new ListaEncadenada<>();
 
         IListaIterador<Viaje> iter = datos.iterador();
 
         Viaje actual = null;
 
-        while(iter.haySiguiente())
-        {
+        while (iter.haySiguiente()) {
             actual = iter.siguiente();
 
-            if (actual.darMes() == mes && actual.darIdOrigen() == origen){
+            if (actual.darMes() == mes && actual.darIdOrigen() == origen) {
                 lista.insertarFinal(actual);
             }
         }
@@ -98,58 +98,56 @@ public class MVCModelo {
     }
 
 
-
-	/**
-	 * Requerimiento de agregar dato
-	 * @param dato
-	 */
-	public void agregar(Viaje dato)
-	{
-		datos.insertarFinal(dato);
-	}
-
+    /**
+     * Requerimiento de agregar dato
+     *
+     * @param dato
+     */
+    public void agregar(Viaje dato) {
+        datos.insertarFinal(dato);
+    }
 
 
-	public void cargarDatos(String ruta){
-		CSVReader reader = null;
-		try {
+    public void cargarDatos(String ruta) {
+        CSVReader reader = null;
+        try {
 
-			reader = new CSVReader(new FileReader(ruta));
+            reader = new CSVReader(new FileReader(ruta));
 
-			Iterator iter = reader.iterator();
+            Iterator iter = reader.iterator();
 
-			iter.next();
+            iter.next();
 
-			while (iter.hasNext()){
+            while (iter.hasNext()) {
 
-				String[] parametros = (String[]) iter.next();
+                String[] parametros = (String[]) iter.next();
 
-				Viaje v = crearViaje(parametros);
+                Viaje v = crearViaje(parametros);
 
-				agregar(v);
-			}
-
-
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} finally{
-			if (reader != null) {
-				try {
-					reader.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-
-		}
-	}
+                agregar(v);
+            }
 
 
-	public Viaje crearViaje(String[] datos ){
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
 
-		return new Viaje(Integer.valueOf(datos[0]), Integer.valueOf(datos[1]),Integer.valueOf(datos[2]), Double.valueOf(datos[3]),Double.valueOf(datos[4]), Double.valueOf(datos[5]), Double.valueOf(datos[6]));
+        }
+    }
 
-	}
+
+    public Viaje crearViaje(String[] datos) {
+
+        return new Viaje(Integer.valueOf(datos[0]), Integer.valueOf(datos[1]), Integer.valueOf(datos[2]), Double.valueOf(datos[3]), Double.valueOf(datos[4]), Double.valueOf(datos[5]), Double.valueOf(datos[6]));
+
+    }
 
 
     public ListaEncadenada<Viaje> darDatos() {
