@@ -20,7 +20,7 @@ public class Nodo<E> {
         return valor;
     }
 
-    public void cambiarSiguiente(Nodo<E> nodo){
+    public void insertar(Nodo<E> nodo){
         siguiente = nodo;
     }
 

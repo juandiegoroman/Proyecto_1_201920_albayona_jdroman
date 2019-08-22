@@ -66,20 +66,21 @@ public class Controller {
 					System.out.println("Junio: " + modelo.totalViajesPorMes(5));
 					System.out.println("Julio: " + modelo.totalViajesPorMes(6));
 					System.out.println("\n");
+
 					break;
 
 				case 2:
 
 					
 					try {
-					System.out.println("--------- \nIngresar mes de consulta: ");
+					System.out.println("--------- \nIngresar el número del mes de consulta: ");
 					mesConsulta = lector.nextInt();
-					System.out.println("--------- \nIngresar zona de origen de consulta: ");
+					System.out.println("--------- \nIngresar el número de la zona de origen de consulta: ");
 					zonaOrigenConsulta = lector.nextInt();
 					}
 					catch(Exception e) {
 						
-						System.out.print("Debe ingresar un número");
+						System.out.print("Debe ingresar un número.\n");
 					}
 							
 					break;
@@ -88,11 +89,11 @@ public class Controller {
 
 					if(modelo.darDatos().tamano() == 0) {
 						
-						System.out.print("Aún no se han cargado los datos.");
+						System.out.print("Aún no se han cargado los datos. \n");
 					}
 					
 					else if(mesConsulta == -1 || zonaOrigenConsulta == -1) {
-						System.out.print("Debe ingresar datos de consulta.");
+						System.out.print("Debe ingresar datos de consulta. \n");
 						
 					
 					}
@@ -105,9 +106,11 @@ public class Controller {
 
 						if (lista.tamano() == 0) {
 
-							System.out.println("No se encontraron resultados con los parámetros dados");
+							System.out.println("No se encontraron resultados con los parámetros dados. \n");
 							
 						} else {
+							
+							
 							System.out.println("-----------------------------------------------------------------------------");
 							System.out.printf("%10s %10s  %20s  %20s", "Origen", "Destino", "Tiempo promedio", "Desviación estándar");
 							System.out.println();
@@ -127,7 +130,17 @@ public class Controller {
 
 				case 4:
 
-					try {
+					if(modelo.darDatos().tamano() == 0) {
+						
+						System.out.print("Aún no se han cargado los datos. \n");
+					}
+					
+					else if(mesConsulta == -1 || zonaOrigenConsulta == -1) {
+						System.out.print("Debe ingresar datos de consulta. \n");
+							
+					}
+					
+					else {
 						int totalViajes = modelo.totalViajesReportados();
 						int totalPorMes = modelo.totalViajesPorMes(mesConsulta);
 						int totalPorOrigen = modelo.totalViajesPorOrigen(zonaOrigenConsulta);
@@ -143,25 +156,10 @@ public class Controller {
 						System.out.println("El total de viajes reportados para el origen de consulta: " + totalPorOrigen);
 						System.out.println("El porcentaje de viajes para el el origen  de consulta con respecto al total de viajes del semestre: " + porcentaje2);
 						System.out.println();
-					}
-					catch (Exception e){
-						mensajeError();
-						
-						e.printStackTrace();
+					
 					}
 			}
 		}
 	}
 
-	private void mensajeError() {
-		if (mesConsulta == 0 || zonaOrigenConsulta == 0){
-			System.out.println("Debe ingresar datos de consulta.");
-			System.out.println();
-		}
-		else {
-
-			System.out.println("Aun no se han cargado los datos.");
-			System.out.println();
-		}
-	}
 }
