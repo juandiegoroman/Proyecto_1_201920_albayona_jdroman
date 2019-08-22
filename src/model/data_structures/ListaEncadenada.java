@@ -130,7 +130,7 @@ public class ListaEncadenada<E> implements IListaEncadenada<E>, IListaIterable<E
 	
 			else {
 	
-				actual = actual.siguiente();
+				if(actual.haySiguiente()) actual = actual.siguiente();
 	
 			}
 	
@@ -139,7 +139,9 @@ public class ListaEncadenada<E> implements IListaEncadenada<E>, IListaIterable<E
 	
 		public boolean haySiguiente() {
 	
-			return actual.haySiguiente();
+			if(primero == null) return false;
+			
+			return (actual == null) ? true : actual.haySiguiente();
 		}
 	
 	}

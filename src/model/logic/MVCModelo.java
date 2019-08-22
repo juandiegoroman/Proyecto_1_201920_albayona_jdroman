@@ -40,17 +40,19 @@ public class MVCModelo {
 
         IListaIterador<Viaje> iter = datos.iterador();
 
-        Viaje actual = iter.siguiente();
+        Viaje actual = null;
 
         int total = 0;
         while(iter.haySiguiente())
-        {
-            actual = iter.siguiente();
-
+        {   
+        	actual = iter.siguiente();
             if (actual.darMes() == mes){
               total++;
             }
+            
+           
         }
+        
         return total;
 
     }
@@ -60,8 +62,8 @@ public class MVCModelo {
 
         IListaIterador<Viaje> iter = datos.iterador();
 
-        Viaje actual = iter.siguiente();
-
+        Viaje actual = null;
+        
         int total = 0;
         while(iter.haySiguiente())
         {
@@ -82,7 +84,7 @@ public class MVCModelo {
 
         IListaIterador<Viaje> iter = datos.iterador();
 
-        Viaje actual = iter.siguiente();
+        Viaje actual = null;
 
         while(iter.haySiguiente())
         {
