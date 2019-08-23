@@ -142,13 +142,12 @@ public class Controller {
 					
 					else {
 						int totalViajes = modelo.totalViajesReportados();
-						int totalPorMes = modelo.totalViajesPorMes(mesConsulta);
-						int totalPorOrigen = modelo.totalViajesPorOrigen(zonaOrigenConsulta);
+						
 
 						DecimalFormat d = new DecimalFormat("0.00");
 						
-						String porcentaje1 = d.format(((double)totalPorMes / (double) totalViajes) * 100.00) + " %";
-						String porcentaje2 = d.format(((double)totalPorOrigen / (double) totalViajes) * 100.00) + " %";
+						String porcentaje1 = d.format((modelo.totalPorcentajePorMes(mesConsulta) + " %"));
+						String porcentaje2 = d.format(((modelo.totalPorcentajePorOrigen(zonaOrigenConsulta)) + " %"));
 
 						System.out.println("El total de viajes reportados en el semestre: " + totalViajes);
 						System.out.println("El total de viajes reportados para el mes de consulta: " + totalPorMes);

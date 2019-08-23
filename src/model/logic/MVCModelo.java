@@ -76,6 +76,21 @@ public class MVCModelo {
         return total;
 
     }
+    
+    
+    public double totalPorcentajePorOrigen(int origen)
+    {
+
+        return (double)totalViajesPorOrigen(origen) / (double)totalViajesReportados() * 100;
+
+    }
+    
+    public double totalPorcentajePorMes(int mes)
+    {
+
+        return (double)totalViajesPorMes(mes) / (double)totalViajesReportados()* 100.0;
+
+    }
 
     public ListaEncadenada<Viaje> darListaViajesPorMesYOrigen(int mes, int origen)
     {
