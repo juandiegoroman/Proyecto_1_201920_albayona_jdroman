@@ -78,14 +78,14 @@ public class MVCModelo {
     }
     
     
-    public double totalPorcentajePorOrigen(int origen)
+    public double porcentajePorOrigen(int origen)
     {
 
-        return (double)totalViajesPorOrigen(origen) / (double)totalViajesReportados() * 100;
+        return (double)totalViajesPorOrigen(origen) / (double)totalViajesReportados() * 100.0;
 
     }
     
-    public double totalPorcentajePorMes(int mes)
+    public double porcentajePorMes(int mes)
     {
 
         return (double)totalViajesPorMes(mes) / (double)totalViajesReportados()* 100.0;

@@ -146,13 +146,13 @@ public class Controller {
 
 						DecimalFormat d = new DecimalFormat("0.00");
 						
-						String porcentaje1 = d.format((modelo.totalPorcentajePorMes(mesConsulta) + " %"));
-						String porcentaje2 = d.format(((modelo.totalPorcentajePorOrigen(zonaOrigenConsulta)) + " %"));
+						String porcentaje1 = d.format((modelo.porcentajePorMes(mesConsulta) + " %"));
+						String porcentaje2 = d.format(((modelo.porcentajePorOrigen(zonaOrigenConsulta)) + " %"));
 
 						System.out.println("El total de viajes reportados en el semestre: " + totalViajes);
-						System.out.println("El total de viajes reportados para el mes de consulta: " + totalPorMes);
+						System.out.println("El total de viajes reportados para el mes de consulta: " + modelo.porcentajePorMes(mesConsulta));
 						System.out.println("El porcentaje de viajes para el mes de consulta con respecto al total de viajes del semestre: " + porcentaje1);
-						System.out.println("El total de viajes reportados para el origen de consulta: " + totalPorOrigen);
+						System.out.println("El total de viajes reportados para el origen de consulta: " + modelo.totalViajesPorOrigen(zonaOrigenConsulta));
 						System.out.println("El porcentaje de viajes para el el origen  de consulta con respecto al total de viajes del semestre: " + porcentaje2);
 						System.out.println();
 					

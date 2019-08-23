@@ -94,6 +94,27 @@ public class TestMVCModelo {
 		}				
 	}
 	
+	@Test
+	public void testPorcentajePorMes()
+	{
+		setUp2();
+		
+		for (int i = 1; i < 7; i++) {
+				assertTrue(3.0 / 36.0 *100.0 == modelo.porcentajePorMes(i));			 
+		}				
+	}
+	
+	@Test
+	public void testPorcentajePorOrigen()
+	{
+		setUp2();
+		
+		for (int i = 1; i < 37; i++) {
+				assertTrue(1.0 / 36.0 *100.0 == modelo.porcentajePorOrigen(i));			 
+		}				
+	}
+	
+	
 	
 	
 }
