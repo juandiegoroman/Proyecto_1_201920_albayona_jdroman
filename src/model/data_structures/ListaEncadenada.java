@@ -17,13 +17,13 @@ public class ListaEncadenada<E> implements IListaEncadenada<E>, IListaIterable<E
 		@Override
 		public void insertarPrimero(E valor) {
 			if (estaVacia()) {
-				primero = new Nodo(valor, null);
+				primero = new Nodo(valor, null,null);
 				ultimo = primero;
 			}
 	
 			else {
 				Nodo<E> f = primero;
-				primero = new Nodo<>(valor, f);
+				primero = new Nodo<>(valor, f, null);
 			}
 	
 			tamano++;
@@ -32,13 +32,13 @@ public class ListaEncadenada<E> implements IListaEncadenada<E>, IListaIterable<E
 		@Override
 		public void insertarFinal(E valor) {
 			if (estaVacia()) {
-				ultimo = new Nodo(valor, null);
+				ultimo = new Nodo(valor, null, null);
 				primero = ultimo;
 			} else {
 	
 				Nodo<E> temp = ultimo;
 	
-				ultimo = new Nodo(valor, null);
+				ultimo = new Nodo(valor, null, temp);
 
 				temp.insertar(ultimo);
 			}
