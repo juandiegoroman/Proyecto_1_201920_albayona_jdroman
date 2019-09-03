@@ -20,7 +20,7 @@ public class Viaje implements Comparable<Viaje>{
 
     private double desviacionGeometrica;
 
-
+ 
     public int darMes()
     {
     	return mes;
