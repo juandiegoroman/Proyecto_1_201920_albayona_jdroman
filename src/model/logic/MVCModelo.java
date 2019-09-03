@@ -125,7 +125,7 @@ public class MVCModelo {
 
 
 
-	public void cargarDatos(String ruta){
+	public void cargar(String ruta){
 		CSVReader reader = null;
 		try {
 

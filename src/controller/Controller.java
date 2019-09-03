@@ -55,8 +55,8 @@ public class Controller {
 
 			switch (option) {
 				case 1:
-					modelo.cargarDatos(DATOS_PRIMER_TRIMESTRE);
-					modelo.cargarDatos(DATOS_SEGUNDO_TRIMESTRE);
+					modelo.cargar(DATOS_PRIMER_TRIMESTRE);
+					modelo.cargar(DATOS_SEGUNDO_TRIMESTRE);
 
 					System.out.println("Para el primer semestre del 2018 se leyeron las siguientes cantidades de viajes por mes: \n");
 					System.out.println("Enero: " + modelo.totalViajesPorMes(1));
@@ -73,14 +73,14 @@ public class Controller {
 
 					
 					try {
-					System.out.println("--------- \nIngresar el número del mes de consulta: ");
+					System.out.println("--------- \nIngresar el nï¿½mero del mes de consulta: ");
 					mesConsulta = lector.nextInt();
-					System.out.println("--------- \nIngresar el número de la zona de origen de consulta: ");
+					System.out.println("--------- \nIngresar el nï¿½mero de la zona de origen de consulta: ");
 					zonaOrigenConsulta = lector.nextInt();
 					}
 					catch(Exception e) {
 						
-						System.out.print("Debe ingresar un número.\n");
+						System.out.print("Debe ingresar un nï¿½mero.\n");
 					}
 							
 					break;
@@ -89,7 +89,7 @@ public class Controller {
 
 					if(modelo.darDatos().tamano() == 0) {
 						
-						System.out.print("Aún no se han cargado los datos. \n");
+						System.out.print("Aï¿½n no se han cargado los datos. \n");
 					}
 					
 					else if(mesConsulta == -1 || zonaOrigenConsulta == -1) {
@@ -106,13 +106,13 @@ public class Controller {
 
 						if (lista.tamano() == 0) {
 
-							System.out.println("No se encontraron resultados con los parámetros dados. \n");
+							System.out.println("No se encontraron resultados con los parï¿½metros dados. \n");
 							
 						} else {
 							
 							
 							System.out.println("-----------------------------------------------------------------------------");
-							System.out.printf("%10s %10s  %20s  %20s", "Origen", "Destino", "Tiempo promedio", "Desviación estándar");
+							System.out.printf("%10s %10s  %20s  %20s", "Origen", "Destino", "Tiempo promedio", "Desviaciï¿½n estï¿½ndar");
 							System.out.println();
 							System.out.println("-----------------------------------------------------------------------------");
 
@@ -132,7 +132,7 @@ public class Controller {
 
 					if(modelo.darDatos().tamano() == 0) {
 						
-						System.out.print("Aún no se han cargado los datos. \n");
+						System.out.print("Aï¿½n no se han cargado los datos. \n");
 					}
 					
 					else if(mesConsulta == -1 || zonaOrigenConsulta == -1) {

@@ -21,7 +21,7 @@ public class TestMVCModelo {
 	}
 
 	public void setUp2() {
-		modelo.cargarDatos(DATOS);
+		modelo.cargar(DATOS);
 		}
 	
 	
