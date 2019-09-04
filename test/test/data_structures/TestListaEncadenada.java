@@ -18,6 +18,8 @@ public class TestListaEncadenada {
 	}
 
 	public void setUp2() {
+		lista = new ListaEncadenada<String>();
+		
 		for(int i =0; i< 10; i++){
 			lista.insertarFinal(""+i);
 		}
@@ -59,6 +61,7 @@ public class TestListaEncadenada {
 		setUp2();
 		lista.insertarFinal(""+10);
 		assertEquals("10", lista.buscar(10));
+		
 
 	}
 
@@ -69,19 +72,19 @@ public class TestListaEncadenada {
 		assertEquals("-1", lista.buscar(0));
 
 	}
-	
+
 	@Test
 	public void testIterador() {
 		setUp2();
 		IListaIterador<String> iter = lista.iterador();
-		
+
 		String actual = "";
 		for (int i = 0; i < 10; i++) {
 			actual = iter.siguiente();
 			assertEquals(actual, lista.buscar(i));
-		}		
+		}
 	}
-	
+
 	@Test
 	public void testEliminar()  {
 		setUp2();
@@ -89,8 +92,12 @@ public class TestListaEncadenada {
 		assertEquals(9, lista.tamano());
 		assertEquals("1", lista.buscar(0));
 		
-
+		setUp2();
+		lista.eliminar(9);
+		assertEquals(9, lista.tamano());
+		assertEquals("8", lista.buscar(8));
+		
 	}
-	
-	
+
+
 }
