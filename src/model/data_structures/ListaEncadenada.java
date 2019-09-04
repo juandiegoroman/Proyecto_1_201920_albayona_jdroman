@@ -154,4 +154,6 @@ public class ListaEncadenada<E> implements IListaEncadenada<E>, IListaIterable<E
 		return new ListaIterador();
 	}
 	
+
+	
 	}
