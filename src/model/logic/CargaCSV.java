@@ -33,11 +33,6 @@ public class CargaCSV {
         datosPorHora = new ListaEncadenada<>();
     }
 
-    public void agregar(Viaje dato)
-    {
-        datos.insertarFinal(dato);
-    }
-
 
     public void cargarTodos(int trimestre){
 
