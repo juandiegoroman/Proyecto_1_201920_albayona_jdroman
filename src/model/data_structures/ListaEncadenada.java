@@ -102,6 +102,10 @@ public class ListaEncadenada<E> implements IListaEncadenada<E>, IListaIterable<E
 	
 		}
 	
+		public void ordenar()
+		{
+			
+		}
 
 	@Override
 	public int tamano() {
