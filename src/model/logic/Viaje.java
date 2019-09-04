@@ -26,7 +26,7 @@ public class Viaje implements Comparable<Viaje>{
         this.desviacionGeometrica = desviacionGeometrica;
     }
 
-    public int getIndicadorTemporal() {
+    public int darIndicadorTemporal() {
         return indicadorTemporal;
     }
     public int darIdOrigen()
