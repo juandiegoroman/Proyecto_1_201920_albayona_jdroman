@@ -101,6 +101,79 @@ public class ListaEncadenada<E> implements IListaEncadenada<E>, IListaIterable<E
 			return aEliminar.valor();
 	
 		}
+		
+		
+		Nodo split(Nodo head) { 
+	        Nodo fast = head;
+	        		
+	        		Nodo slow = head; 
+	        while (fast.siguiente() != null && fast.siguiente().siguiente() != null) { 
+	            fast = fast.siguiente().siguiente(); 
+	            slow = slow.siguiente(); 
+	        } 
+	        Nodo temp = slow.siguiente(); 
+	        slow.siguiente() = null; 
+	        return temp; 
+	    } 
+	  
+	    Nodo mergeSort(Nodo nodo) { 
+	        if (nodo == null || nodo.siguiente() == null) { 
+	            return nodo; 
+	        } 
+	        Nodo second = split(nodo); 
+	  
+	        // Recur for left and right halves 
+	        nodo = mergeSort(nodo); 
+	        second = mergeSort(second); 
+	  
+	        // Merge the two sorted halves 
+	        return merge(nodo, second); 
+	    } 
+	  
+	    // Function to merge two linked lists 
+	    Nodo merge(Nodo first, Nodo second) { 
+	        // If first linked list is empty 
+	        if (first == null) { 
+	            return second; 
+	        } 
+	  
+	        // If second linked list is empty 
+	        if (second == null) { 
+	            return first; 
+	        } 
+	  
+	        // Pick the smaller value 
+	        if (first.data < second.data) { 
+	            first.siguiente() = merge(first.next, second); 
+	            first.siguiente().anterior() = first; 
+	            first.anterior() = null; 
+	            return first; 
+	        } else { 
+	            second.siguiente() = merge(first, second.next); 
+	            second.siguiente().anterior() = second; 
+	            second.anterior() = null; 
+	            return second; 
+	        } 
+	    } 
+	  
+	    // Driver program to test above functions 
+	    public static void main(String[] args) { 
+	  
+	        ListaEncadenada list = new ListaEncadenada<>(); 
+	        list.head = new Nodo(10); 
+	        list.head.next = new Nodo(30); 
+	        list.head.next.next = new Nodo(3); 
+	        list.head.next.next.next = new Nodo(4); 
+	        list.head.next.next.next.next = new Nodo(20); 
+	        list.head.next.next.next.next.next = new Nodo(5); 
+	          
+	          
+	        Node node = null; 
+	        node = list.mergeSort(head); 
+	        System.out.println("Linked list after sorting :"); 
+	        list.print(node); 
+	    }
+	    
 	
 		public void ordenar()
 		{
