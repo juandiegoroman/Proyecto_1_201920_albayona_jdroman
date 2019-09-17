@@ -60,6 +60,6 @@ public class Viaje {
 
     public String toString(){
 
-        return "" + idOrigen;
+        return "" + tiempoPromedio;
     }
 }

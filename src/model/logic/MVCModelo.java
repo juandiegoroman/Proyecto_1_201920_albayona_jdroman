@@ -127,7 +127,15 @@ public class MVCModelo {
                         mayorTemp = iterMayores.siguiente();
                     }
 
-                    viajesMayores.insertarTrasActual(viaje);
+
+                        if (mayorTemp.darTiempoPromedio() < viaje.darTiempoPromedio()){
+                            viajesMayores.insertarDespues(viaje);
+                        }
+                        else {
+                            viajesMayores.insertarAntes(viaje);
+                        }
+
+
 
                     if (viajesMayores.tamano() > n) viajesMayores.sacarPrimero();
                 }
