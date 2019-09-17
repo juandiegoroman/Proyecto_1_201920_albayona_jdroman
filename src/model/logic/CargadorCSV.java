@@ -23,10 +23,10 @@ public class DatosCSV {
     private ListaEncadenada<Viaje> datosPorDia;
     private ListaEncadenada<Viaje> datosPorHora;
 
-    public DatosCSV() {
-        datosPorMes = new ListaEncadenada<>();
-        datosPorDia = new ListaEncadenada<>();
-        datosPorHora = new ListaEncadenada<>();
+    public DatosCSV(ListaEncadenada<Viaje> datosMes, ListaEncadenada<Viaje> datosDia, ListaEncadenada<Viaje> datosHora ) {
+        datosPorMes = datosMes;
+        datosPorDia = datosDia;
+        datosPorHora = datosHora;
     }
 
 
@@ -36,19 +36,10 @@ public class DatosCSV {
         cargar(DIRECTORIO,trimestre, DIA);
         cargar(DIRECTORIO,trimestre, HORA);
 
+
+
     }
 
-    public ListaEncadenada<Viaje> datosMes() {
-        return datosPorMes;
-    }
-
-    public ListaEncadenada<Viaje> datosDia() {
-        return datosPorDia;
-    }
-
-    public ListaEncadenada<Viaje> datosHora() {
-        return datosPorHora;
-    }
 
     public void cargar(String directorio, int trimestre, String indicadorTemporal){
         CSVReader reader = null;
@@ -64,7 +55,7 @@ public class DatosCSV {
 
                 String[] parametros = (String[]) iter.next();
 
-             crearYAgregarViaje(parametros, indicadorTemporal);
+                crearYAgregarViaje(parametros, indicadorTemporal);
 
             }
 
