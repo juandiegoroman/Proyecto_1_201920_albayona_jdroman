@@ -1,6 +1,6 @@
 package model.logic;
 
-public class Viaje implements Comparable<Viaje>{
+public class Viaje {
 
     private int idOrigen;
 

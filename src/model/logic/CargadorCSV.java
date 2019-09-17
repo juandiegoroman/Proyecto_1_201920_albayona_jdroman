@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.Iterator;
 
 
-public class DatosCSV {
+public class CargadorCSV {
 
     public final static String DIRECTORIO = "./data/bogota-cadastral-2018-";
     public final static String MES = "-All-MonthlyAggregate.csv";
@@ -23,7 +23,7 @@ public class DatosCSV {
     private ListaEncadenada<Viaje> datosPorDia;
     private ListaEncadenada<Viaje> datosPorHora;
 
-    public DatosCSV(ListaEncadenada<Viaje> datosMes, ListaEncadenada<Viaje> datosDia, ListaEncadenada<Viaje> datosHora ) {
+    public CargadorCSV(ListaEncadenada<Viaje> datosMes, ListaEncadenada<Viaje> datosDia, ListaEncadenada<Viaje> datosHora ) {
         datosPorMes = datosMes;
         datosPorDia = datosDia;
         datosPorHora = datosHora;
