@@ -288,32 +288,34 @@ public class MVCModelo {
         IListaIterador<Viaje> iter1 = lista1.iterador();
         IListaIterador<Viaje> iter2 = lista2.iterador();
 
-        Viaje temp1 = iter1.siguiente();
-        Viaje temp2 = iter2.siguiente();
 
-        boolean incluir1 = (temp1 == null) ? false : temp1.darIdDestino() == zonaInicial;
-        boolean incluir2 = (temp2 == null) ? false : temp2.darIdOrigen() == zonaInicial;
+        String[] viajes1 = new String[zonaFinal - zonaInicial + 1];
+
+        while (iter1.haySiguiente()){
+            Viaje temp1 = iter1.siguiente();
+            viajes1[temp1.darIdDestino() - zonaInicial] = temp1.darTiempoPromedio() + " segundos de la zona " + temp1.darIdOrigen() + " a la zona " + temp1.darIdDestino();
+
+        }
+
+        String[] viajes2 = new String[zonaFinal - zonaInicial + 1];
+
+        while (iter2.haySiguiente()){
+            Viaje temp2 = iter2.siguiente();
+            viajes2[temp2.darIdOrigen() - zonaInicial] = temp2.darTiempoPromedio() + " segundos de la zona " + temp2.darIdOrigen() + " a la zona " + temp2.darIdDestino();
+        }
 
         for (int i = zonaInicial; i < zonaFinal + 1; i++) {
 
             String linea1 = "No hay  viajes de la zona " + zonaReferencia + " a la zona " + i;
             String linea2 = "No hay viajes de la zona " + i + " a la zona " + zonaReferencia;
 
-            if (incluir1) {
-                linea1 = temp1.darTiempoPromedio() + " segundos de la zona " + temp1.darIdOrigen() + " a la zona " + temp1.darIdDestino();
-
-                temp1 = iter1.siguiente();
+            if (viajes1[i - zonaInicial] != null){
+                linea1 = viajes1[i - zonaInicial];
             }
 
-            incluir1 = (temp1 == null) ? false : temp1.darIdDestino() == i + 1;
-
-            if (incluir2) {
-                linea2 = temp2.darTiempoPromedio() + " segundos de la zona " + temp2.darIdOrigen() + " a la zona " + temp2.darIdDestino();
-
-                temp2 = iter1.siguiente();
+            if (viajes2[i - zonaInicial] != null){
+                linea2 = viajes2[i - zonaInicial];
             }
-
-            incluir2 = (temp2 == null) ? false : temp2.darIdDestino() == i + 1;
 
 
             System.out.format("%-50s %-5s %5s %-50s", linea1, "vs", "", linea2);

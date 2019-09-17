@@ -12,7 +12,7 @@ public class ListaEncadenada<E> {
     private int tamano;
 
     /* Node Class */
-    public class Nodo<E> {
+    public static class Nodo<E> {
 
         E valor;
         Nodo siguiente, anterior;
@@ -70,19 +70,6 @@ public class ListaEncadenada<E> {
             return (actual != null) ? actual.valor : null;
         }
 
-        @Override
-        public E anterior() {
-
-            if (actual == null) {
-                actual = primero;
-            } else {
-
-                if (actual.anterior != null) actual = actual.anterior;
-
-            }
-
-            return (actual != null) ? actual.valor : null;
-        }
 
         public boolean haySiguiente() {
 
@@ -91,12 +78,7 @@ public class ListaEncadenada<E> {
             return (actual == null) ? true : actual.siguiente != null;
         }
 
-        public boolean hayAnterior() {
 
-            if (primero == null) return false;
-
-            return (actual == null) ? true : actual.siguiente != null;
-        }
 
 
     }
@@ -142,7 +124,7 @@ public class ListaEncadenada<E> {
         }
 
 
-           else {
+        else {
 
             Nodo<E> nuevo = new Nodo<E>(valor, actual.siguiente, actual);
             actual.siguiente = nuevo;
@@ -205,54 +187,54 @@ public class ListaEncadenada<E> {
 
     // Split a doubly linked list (DLL) into 2 DLLs of
     // half sizes
-    Nodo split(Nodo head) {
-        Nodo fast = head, slow = head;
-        while (fast.siguiente != null && fast.siguiente.siguiente != null) {
-            fast = fast.siguiente.siguiente;
-            slow = slow.siguiente;
+    Nodo dividir(Nodo inicio) {
+        Nodo mitad1 = inicio, mitad2 = inicio;
+        while (mitad1.siguiente != null && mitad1.siguiente.siguiente != null) {
+            mitad1 = mitad1.siguiente.siguiente;
+            mitad2 = mitad2.siguiente;
         }
-        Nodo temp = slow.siguiente;
-        slow.siguiente = null;
+        Nodo temp = mitad2.siguiente;
+        mitad2.siguiente = null;
         return temp;
     }
 
-    Nodo mergeSort(Nodo nodo, IComparador c) {
-        if (nodo == null || nodo.siguiente == null) {
-            return nodo;
+    Nodo mergeSort(Nodo primero, IComparador c) {
+        if (primero == null || primero.siguiente == null) {
+            return primero;
         }
-        Nodo second = split(nodo);
+        Nodo segundo = dividir(primero);
 
         // Recur for left and right halves
-        nodo = mergeSort(nodo, c);
-        second = mergeSort(second, c);
+        primero = mergeSort(primero, c);
+        segundo = mergeSort(segundo, c);
 
         // Merge the two sorted halves
-        return merge(nodo, second, c);
+        return merge(primero, segundo, c);
     }
 
     // Function to merge two linked lists
-    Nodo merge(Nodo first, Nodo second, IComparador c) {
+    Nodo merge(Nodo primero, Nodo segundo, IComparador c) {
         // If first linked list is empty
-        if (first == null) {
-            return second;
+        if (primero == null) {
+            return segundo;
         }
 
         // If second linked list is empty
-        if (second == null) {
-            return first;
+        if (segundo == null) {
+            return primero;
         }
 
         // Pick the smaller value
-        if (c.comparar(first.valor, second.valor) < 0) {
-            first.siguiente = merge(first.siguiente, second, c);
-            first.siguiente.anterior = first;
-            first.anterior = null;
-            return first;
+        if (c.comparar(primero.valor, segundo.valor) < 0) {
+            primero.siguiente = merge(primero.siguiente, segundo, c);
+            primero.siguiente.anterior = primero;
+            primero.anterior = null;
+            return primero;
         } else {
-            second.siguiente = merge(first, second.siguiente, c);
-            second.siguiente.anterior = second;
-            second.anterior = null;
-            return second;
+            segundo.siguiente = merge(primero, segundo.siguiente, c);
+            segundo.siguiente.anterior = segundo;
+            segundo.anterior = null;
+            return segundo;
         }
     }
 
@@ -266,24 +248,36 @@ public class ListaEncadenada<E> {
     }
 
     public Nodo ordenarPorMergeSort(IComparador c){
-       return mergeSort(primero,c);
+        if (!estaVacia()) {
+            primero = mergeSort(primero, c);
+
+            Nodo<E> temp = primero;
+
+            while (temp.siguiente != null) {
+                temp = temp.siguiente;
+            }
+            ultimo = temp;
+        }
+
+        return  primero;
     }
 
 
     public static void main(String[] args) {
 
         ListaEncadenada<Integer> list = new ListaEncadenada();
-        list.insertarFinal(10);
-        list.insertarFinal(30);
-        list.insertarFinal(2);
+        list.primero = new Nodo<>(10, null, null);
+        list.primero.siguiente= new Nodo<>(30, null, null);
+        list.primero.siguiente.siguiente= new Nodo<>(2, null, null);
 
 
 
 
         System.out.println("Linked list after sorting :");
         list.print(  list.ordenarPorMergeSort( new Comparadora()));
+        list.print(list.primero);
 
     }
 }
 
-// This code has been contributed by Mayank Jaiswal
+
