@@ -44,6 +44,7 @@ public class ListaEncadenada<E> {
         } else {
             Nodo<E> f = primero;
             primero = new Nodo<>(valor, f, null);
+            f.anterior = primero;
         }
 
         tamano++;
@@ -69,7 +70,28 @@ public class ListaEncadenada<E> {
             return (actual != null) ? actual.valor : null;
         }
 
+        @Override
+        public E anterior() {
+
+            if (actual == null) {
+                actual = primero;
+            } else {
+
+                if (actual.anterior != null) actual = actual.anterior;
+
+            }
+
+            return (actual != null) ? actual.valor : null;
+        }
+
         public boolean haySiguiente() {
+
+            if (primero == null) return false;
+
+            return (actual == null) ? true : actual.siguiente != null;
+        }
+
+        public boolean hayAnterior() {
 
             if (primero == null) return false;
 
@@ -113,17 +135,35 @@ public class ListaEncadenada<E> {
         return new ListaIterador();
     }
 
-    public void insertarTrasActual(E valor){
+    public void insertarDespues(E valor){
 
         if (actual == ultimo){
             insertarFinal(valor);
         }
 
-        else {
+
+           else {
 
             Nodo<E> nuevo = new Nodo<E>(valor, actual.siguiente, actual);
             actual.siguiente = nuevo;
             actual.siguiente.anterior = nuevo;
+
+            tamano++;
+        }
+
+    }
+
+    public void insertarAntes(E valor){
+
+        if (actual == primero){
+            insertarPrimero(valor);
+        }
+
+        else {
+
+            Nodo<E> nuevo = new Nodo<E>(valor, actual, actual.anterior);
+            actual.anterior = nuevo;
+            nuevo.anterior.siguiente = nuevo;
 
             tamano++;
         }
