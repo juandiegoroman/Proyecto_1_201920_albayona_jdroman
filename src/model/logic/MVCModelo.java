@@ -224,7 +224,7 @@ public class MVCModelo {
 
         IComparador criterio = new ComparadorPorDestino();
 
-        buscados.ordenar(criterio);
+        buscados.ordenarPorMergeSort(criterio);
 
         return buscados;
     }
@@ -259,7 +259,7 @@ public class MVCModelo {
 
         IComparador criterio = new ComparadorPorOrigen();
 
-        buscados.ordenar(criterio);
+        buscados.ordenarPorMergeSort(criterio);
 
         return buscados;
     }

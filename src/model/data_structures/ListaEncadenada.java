@@ -265,7 +265,7 @@ public class ListaEncadenada<E> {
         }
     }
 
-    public Nodo ordenar(IComparador c){
+    public Nodo ordenarPorMergeSort(IComparador c){
        return mergeSort(primero,c);
     }
 
@@ -281,7 +281,7 @@ public class ListaEncadenada<E> {
 
 
         System.out.println("Linked list after sorting :");
-        list.print(  list.ordenar( new Comparadora()));
+        list.print(  list.ordenarPorMergeSort( new Comparadora()));
 
     }
 }
