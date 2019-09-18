@@ -29,6 +29,7 @@ public class Viaje {
     public int darIndicadorTemporal() {
         return indicadorTemporal;
     }
+
     public int darIdOrigen()
     {
     	return idOrigen;

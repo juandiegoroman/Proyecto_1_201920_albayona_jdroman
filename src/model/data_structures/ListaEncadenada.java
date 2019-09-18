@@ -1,7 +1,7 @@
 package model.data_structures;
 
 // Linked List Class
-public class ListaEncadenada<E> {
+public class ListaEncadenada<E> implements IListaEncadenada<E>{
 
     private Nodo<E> actual;
 
@@ -260,23 +260,6 @@ public class ListaEncadenada<E> {
         }
 
         return  primero;
-    }
-
-
-    public static void main(String[] args) {
-
-        ListaEncadenada<Integer> list = new ListaEncadenada();
-        list.primero = new Nodo<>(10, null, null);
-        list.primero.siguiente= new Nodo<>(30, null, null);
-        list.primero.siguiente.siguiente= new Nodo<>(2, null, null);
-
-
-
-
-        System.out.println("Linked list after sorting :");
-        list.print(  list.ordenarPorMergeSort( new Comparadora()));
-        list.print(list.primero);
-
     }
 }
 
