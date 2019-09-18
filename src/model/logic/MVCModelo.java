@@ -238,7 +238,7 @@ public class MVCModelo {
         }
     }
 
-    public int[] datosGrafica(int pOrigen, int pDestino)
+    public int[] tiempoPromedioViajePorCadaHora(int pOrigen, int pDestino)
     {
         int[] listaPromedios = new int[24];
         double[] total = new double[24];
@@ -340,7 +340,7 @@ public class MVCModelo {
             if (viajes2[i - zonaInicial] != null){
                 linea2 = viajes2[i - zonaInicial];
             }
-            
+
             System.out.format("%-50s %-5s %5s %-50s", linea1, "vs", "", linea2);
             System.out.println();
 
