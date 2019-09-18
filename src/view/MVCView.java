@@ -14,13 +14,11 @@ public class MVCView
 	    
 		public void printMenu()
 		{
-			System.out.println("1. Crear Arreglo Dinamico de Strings");
-			System.out.println("2. Agregar String");
-			System.out.println("3. Buscar String");
-			System.out.println("4. Eliminar String");
-			System.out.println("5. Imprimir el Arreglo");
-			System.out.println("6. Exit");
-			System.out.println("Dar el numero de opcion a resolver, luego oprimir tecla Return: (e.g., 1):");
+			System.out.println("1. Cargar los viajes para el trimiestre seleccionado.");
+			System.out.println("2. Tiempo promedio y desviacion estandar en rango indicado.");
+			System.out.println("3. Dar N viajes con mayor tiempo promedio.");
+			System.out.println("4. Comparar consultas de zona X con zona dada.");
+			System.out.println("5. Tabla ASCII.");
 		}
 
 		public void printMessage(String mensaje) {
@@ -28,8 +26,4 @@ public class MVCView
 			System.out.println(mensaje);
 		}		
 		
-		public void printModelo(MVCModelo modelo)
-		{
-			// TODO implementar
-		}
 }
