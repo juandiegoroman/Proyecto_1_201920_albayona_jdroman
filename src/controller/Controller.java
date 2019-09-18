@@ -247,7 +247,7 @@ public class Controller {
 
                     System.out.println("Zona origen: " + zonaOrigen);
                     System.out.println("Zona destino: " + zonaDestino);
-                    System.out.format("%-5s %-1s %10s" , "Hora", "|", "# de minutos" );
+                    System.out.format("%-5s %-1s %-10s" , "Hora", "|", "# de minutos" );
                     System.out.println();
                     
                     int[] temp = modelo.datosGrafica(zonaOrigen, zonaDestino);
@@ -263,7 +263,7 @@ public class Controller {
                         }
 
 
-                        System.out.format("%-5s %-1s %10s", String.format("%02d" , i) ,"|", linea);
+                        System.out.format("%-5s %-1s %-10s", String.format("%02d" , i) ,"|", linea);
 
                         System.out.println();
                     }
