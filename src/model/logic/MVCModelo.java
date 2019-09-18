@@ -98,57 +98,9 @@ public class MVCModelo {
         }
         return menor;
     }
-    
-    public int[] datosGrafica(int pOrigen, int pDestino)
-    {
-    	int[] listaPromedios = new int[24];
-    	double[] total = new double[24];
-    	int[] cantidad = new int[24];
-    	IListaIterador<Viaje> iter = datosPorDia.iterador() ;
-    	while(iter.haySiguiente())
-    	{
-    		Viaje actual = iter.siguiente();
-    		if(actual.darIdOrigen() == pOrigen && actual.darIdDestino() == pDestino)
-    		{
-    			total[actual.darIndicadorTemporal()] += actual.darTiempoPromedio();
-    			cantidad[actual.darIndicadorTemporal()]++;
-    		}
-    	
-    	}
-    	for(int i = 0; i< cantidad.length && i< total.length;i++)
-    	{
-    		listaPromedios[i] = (int) Math.round(total[i]/cantidad[i]);
-    	}
-    	return listaPromedios;
-    }
 
 
-    public double tiempoPromedioDeViajesEnRangoPorIndicadorTemporal(int codigoIndicadorTemporal, int pOrigen, int pDestino, String indicadorTemporal) {
-	    double cont = 0;
-	    double total = 0;
-	    double promedio = 0;
-	    IListaIterador<Viaje> iter = null;
-	
-	    if (indicadorTemporal.equals(MES)) iter = datosPorMes.iterador();
-	    else if (indicadorTemporal.equals(DIA)) iter = datosPorDia.iterador();
-	    else if (indicadorTemporal.equals(HORA)) iter = datosPorHora.iterador();
-	
-	    while (iter.haySiguiente()) {
-	        Viaje actual = iter.siguiente();
-	        if (actual.darIndicadorTemporal() == codigoIndicadorTemporal && actual.darIdOrigen() > pOrigen && actual.darIdDestino() < pDestino) {
-	            cont += actual.darTiempoPromedio();
-	            total++;
-	        }
-	    }
-	
-	    if (total == 0) promedio = 0;
-	
-	    else promedio = cont / total;
-	
-	    return promedio;
-	}
-
-	public ListaEncadenada<Viaje> darNMayoresPorIndicadorTemporal(int n, int codigoIndicadorTemporal, String indicadorTemporal) {
+    public ListaEncadenada<Viaje> darNMayoresPorIndicadorTemporal(int n, int codigoIndicadorTemporal, String indicadorTemporal) {
 
         ListaEncadenada<Viaje> viajesMayores = new ListaEncadenada<>();
 
@@ -193,6 +145,31 @@ public class MVCModelo {
         return viajesMayores;
     }
 
+
+    public double tiempoPromedioDeViajesEnRangoPorIndicadorTemporal(int codigoIndicadorTemporal, int pOrigen, int pDestino, String indicadorTemporal) {
+        double cont = 0;
+        double total = 0;
+        double promedio = 0;
+        IListaIterador<Viaje> iter = null;
+
+        if (indicadorTemporal.equals(MES)) iter = datosPorMes.iterador();
+        else if (indicadorTemporal.equals(DIA)) iter = datosPorDia.iterador();
+        else if (indicadorTemporal.equals(HORA)) iter = datosPorHora.iterador();
+
+        while (iter.haySiguiente()) {
+            Viaje actual = iter.siguiente();
+            if (actual.darIndicadorTemporal() == codigoIndicadorTemporal && actual.darIdOrigen() > pOrigen && actual.darIdDestino() < pDestino) {
+                cont += actual.darTiempoPromedio();
+                total++;
+            }
+        }
+
+        if (total == 0) promedio = 0;
+
+        else promedio = cont / total;
+
+        return promedio;
+    }
 
     public double promedioDesviacionEstandarDeViajesEnRangoPorIndicadorTemporal(int codigoIndicadorTemporal, int pOrigen, int pDestino, String indicadorTemporal) {
         double cont = 0;
@@ -261,6 +238,30 @@ public class MVCModelo {
         }
     }
 
+    public int[] datosGrafica(int pOrigen, int pDestino)
+    {
+        int[] listaPromedios = new int[24];
+        double[] total = new double[24];
+        double[] cantidad = new double[24];
+        IListaIterador<Viaje> iter = datosPorDia.iterador() ;
+        while(iter.haySiguiente())
+        {
+            Viaje actual = iter.siguiente();
+            if(actual.darIdOrigen() >= pOrigen && actual.darIdDestino() <= pDestino)
+            {
+                total[actual.darIndicadorTemporal()] += actual.darTiempoPromedio();
+                cantidad[actual.darIndicadorTemporal()]++;
+            }
+
+        }
+        for(int i = 0; i< cantidad.length; i++)
+        {
+            listaPromedios[i] = (int) Math.round(total[i]/cantidad[i]);
+        }
+        return listaPromedios;
+    }
+
+
     public ListaEncadenada<Viaje> viajesDeZonaXAZonaDadaPorIndicadorTemporal(int zonaReferencia, int zonaInicial, int zonaFinal, int codigoIndicadorTemporal, String indicadorTemporal) {
         IListaIterador<Viaje> iter = null;
 
@@ -312,7 +313,7 @@ public class MVCModelo {
         IListaIterador<Viaje> iter2 = lista2.iterador();
 
 
-        String[] viajes1 = new String[zonaFinal - zonaInicial + 1];
+        String[] viajes1 = new String[zonaFinal - zonaInicial];
 
         while (iter1.haySiguiente()){
             Viaje temp1 = iter1.siguiente();
@@ -320,7 +321,7 @@ public class MVCModelo {
 
         }
 
-        String[] viajes2 = new String[zonaFinal - zonaInicial + 1];
+        String[] viajes2 = new String[zonaFinal - zonaInicial];
 
         while (iter2.haySiguiente()){
             Viaje temp2 = iter2.siguiente();
