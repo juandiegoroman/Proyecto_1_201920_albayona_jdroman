@@ -340,8 +340,7 @@ public class MVCModelo {
             if (viajes2[i - zonaInicial] != null){
                 linea2 = viajes2[i - zonaInicial];
             }
-
-
+            
             System.out.format("%-50s %-5s %5s %-50s", linea1, "vs", "", linea2);
             System.out.println();
 
