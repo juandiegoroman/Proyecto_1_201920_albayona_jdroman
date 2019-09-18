@@ -224,10 +224,6 @@ public class Controller {
 
                 case 5:
 
-
-
-
-
                     try {
                         System.out.println("\nIngresar la zona de origen: ");
                         zonaOrigen = lector.nextInt();
@@ -246,12 +242,13 @@ public class Controller {
 
 
 
-                    System.out.println("Aproximaci�n en minutos de viajes entre zona origen y zona destino.");
+                    System.out.println("Aproximacion en minutos de viajes entre zona origen y zona destino.");
                     System.out.println("Trimestre " + trimestre + " del 2018 detallado por cada hora del día");
 
                     System.out.println("Zona origen: " + zonaOrigen);
                     System.out.println("Zona destino: " + zonaDestino);
-                    System.out.printf(" %-10s  %20s", "Hora|", "# de mminutos");
+                    System.out.format("%-5s %-1s %10s" , "Hora", "|", "# de minutos" );
+                    System.out.println();
                     
                     int[] temp = modelo.datosGrafica(zonaOrigen, zonaDestino);
 
@@ -266,12 +263,12 @@ public class Controller {
                         }
 
 
-                        System.out.printf(" %-10s  %20s", String.format("%02d", i) + "\r|", linea);
+                        System.out.format("%-5s %-1s %10s", String.format("%02d" , i) ,"|", linea);
+
                         System.out.println();
                     }
                     
                     break;
-
 
                 default: {
                     System.out.println("Opcion invalida");
