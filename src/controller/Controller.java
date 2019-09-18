@@ -228,13 +228,6 @@ public class Controller {
 
 
 
-                    System.out.println("Aproximación en minutos de viajes entre zona origen y zona destino.");
-                    System.out.println("Trimestre " + trimestre + " del 2018 detallado por cada hora del día");
-
-                    System.out.println("Zona origen: " + zonaOrigen);
-                    System.out.println("Zona destino: " + zonaDestino);
-                    System.out.printf(" %-10s  %20s", "Hora|", "# de mminutos");
-
                     try {
                         System.out.println("\nIngresar la zona de origen: ");
                         zonaOrigen = lector.nextInt();
@@ -251,20 +244,31 @@ public class Controller {
                         System.out.print("Debe ingresar un n�mero.\n");
                     }
 
+
+
+                    System.out.println("Aproximaci�n en minutos de viajes entre zona origen y zona destino.");
+                    System.out.println("Trimestre " + trimestre + " del 2018 detallado por cada hora del día");
+
+                    System.out.println("Zona origen: " + zonaOrigen);
+                    System.out.println("Zona destino: " + zonaDestino);
+                    System.out.printf(" %-10s  %20s", "Hora|", "# de mminutos");
+                    
                     int[] temp = modelo.datosGrafica(zonaOrigen, zonaDestino);
 
                     for (int i = 0; i < temp.length; i++) {
 
-                        String linea = "";
+                        String linea = "hora sin viajes";
 
                         for (int j = 0; j <  temp[i]; j++) {
                             linea+="*";
                         }
 
 
-                        System.out.printf(" %-10s  %20s", String.format("%04d", i) + "\r|", linea);
+                        System.out.printf(" %-10s  %20s", String.format("%02d", i) + "\r|", linea);
                         System.out.println();
                     }
+                    
+                    break;
 
 
                 default: {
