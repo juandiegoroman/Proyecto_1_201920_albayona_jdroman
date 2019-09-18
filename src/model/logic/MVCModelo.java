@@ -256,7 +256,7 @@ public class MVCModelo {
         }
         for(int i = 0; i< cantidad.length; i++)
         {
-            listaPromedios[i] = (int) Math.round(total[i]/cantidad[i]);
+            listaPromedios[i] = (int) Math.round((total[i]/(cantidad[i])) / 60.0);
         }
         return listaPromedios;
     }
