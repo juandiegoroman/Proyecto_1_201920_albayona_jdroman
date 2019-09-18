@@ -246,7 +246,7 @@ public class Controller {
 
 
 
-                    System.out.println("Aproximación en minutos de viajes entre zona origen y zona destino.");
+                    System.out.println("Aproximaciï¿½n en minutos de viajes entre zona origen y zona destino.");
                     System.out.println("Trimestre " + trimestre + " del 2018 detallado por cada hora del dÃ­a");
 
                     System.out.println("Zona origen: " + zonaOrigen);
@@ -258,6 +258,8 @@ public class Controller {
                     for (int i = 0; i < temp.length; i++) {
 
                         String linea = "hora sin viajes";
+
+                        if(temp[i] > 0) linea = "";
 
                         for (int j = 0; j <  temp[i]; j++) {
                             linea+="*";

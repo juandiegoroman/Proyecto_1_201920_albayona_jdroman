@@ -243,7 +243,7 @@ public class MVCModelo {
         int[] listaPromedios = new int[24];
         double[] total = new double[24];
         double[] cantidad = new double[24];
-        IListaIterador<Viaje> iter = datosPorDia.iterador() ;
+        IListaIterador<Viaje> iter = datosPorHora.iterador() ;
         while(iter.haySiguiente())
         {
             Viaje actual = iter.siguiente();
@@ -313,7 +313,7 @@ public class MVCModelo {
         IListaIterador<Viaje> iter2 = lista2.iterador();
 
 
-        String[] viajes1 = new String[zonaFinal - zonaInicial];
+        String[] viajes1 = new String[zonaFinal - zonaInicial + 1];
 
         while (iter1.haySiguiente()){
             Viaje temp1 = iter1.siguiente();
@@ -321,7 +321,7 @@ public class MVCModelo {
 
         }
 
-        String[] viajes2 = new String[zonaFinal - zonaInicial];
+        String[] viajes2 = new String[zonaFinal - zonaInicial + 1];
 
         while (iter2.haySiguiente()){
             Viaje temp2 = iter2.siguiente();
@@ -348,6 +348,5 @@ public class MVCModelo {
         }
 
     }
-
 
 }
