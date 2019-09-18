@@ -262,7 +262,7 @@ public class MVCModelo {
         while(iter.haySiguiente())
         {
             Viaje actual = iter.siguiente();
-            if(actual.darIdOrigen() >= pOrigen && actual.darIdDestino() <= pDestino)
+            if(estaEntre(pOrigen,pDestino,actual))
             {
                 total[actual.darIndicadorTemporal()] += actual.darTiempoPromedio();
                 cantidad[actual.darIndicadorTemporal()]++;
