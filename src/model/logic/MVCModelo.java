@@ -158,7 +158,7 @@ public class MVCModelo {
 
         while (iter.haySiguiente()) {
             Viaje actual = iter.siguiente();
-            if (actual.darIndicadorTemporal() == codigoIndicadorTemporal && actual.darIdOrigen() == pOrigen && actual.darIdDestino() == pDestino) {
+            if (actual.darIndicadorTemporal() == codigoIndicadorTemporal && estaEntre(pOrigen, pDestino, actual)) {
                 cont += actual.darTiempoPromedio();
                 total++;
             }
@@ -183,7 +183,9 @@ public class MVCModelo {
 
         while (iter.haySiguiente()) {
             Viaje actual = iter.siguiente();
-            if (actual.darIndicadorTemporal() == codigoIndicadorTemporal && actual.darIdOrigen() == pOrigen && actual.darIdDestino() == pDestino) {
+
+
+            if (actual.darIndicadorTemporal() == codigoIndicadorTemporal &&  estaEntre(pOrigen, pDestino, actual)) {
                 cont += actual.darDesviacionEstandar();
                 total++;
             }
@@ -194,6 +196,19 @@ public class MVCModelo {
         else promedio = cont / total;
 
         return promedio;
+    }
+
+    private boolean estaEntre(int pOrigen, int pDestino, Viaje actual) {
+        boolean estaEntre = false;
+
+        if (actual.darIdOrigen() < actual.darIdDestino()){
+            estaEntre = actual.darIdOrigen() > pOrigen && actual.darIdDestino() < pDestino;
+        }
+
+        else if(actual.darIdOrigen() > actual.darIdDestino()){
+            estaEntre = actual.darIdDestino() > pOrigen && actual.darIdOrigen() < pDestino;
+        }
+        return estaEntre;
     }
 
 
