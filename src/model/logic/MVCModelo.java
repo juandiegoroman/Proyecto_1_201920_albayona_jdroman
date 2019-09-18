@@ -158,7 +158,7 @@ public class MVCModelo {
 
         while (iter.haySiguiente()) {
             Viaje actual = iter.siguiente();
-            if (actual.darIndicadorTemporal() == codigoIndicadorTemporal && actual.darIdOrigen() > pOrigen && actual.darIdDestino() < pDestino) {
+            if (actual.darIndicadorTemporal() == codigoIndicadorTemporal && actual.darIdOrigen() == pOrigen && actual.darIdDestino() == pDestino) {
                 cont += actual.darTiempoPromedio();
                 total++;
             }
@@ -183,7 +183,7 @@ public class MVCModelo {
 
         while (iter.haySiguiente()) {
             Viaje actual = iter.siguiente();
-            if (actual.darIndicadorTemporal() == codigoIndicadorTemporal && actual.darIdOrigen() > pOrigen && actual.darIdDestino() < pDestino) {
+            if (actual.darIndicadorTemporal() == codigoIndicadorTemporal && actual.darIdOrigen() == pOrigen && actual.darIdDestino() == pDestino) {
                 cont += actual.darDesviacionEstandar();
                 total++;
             }
