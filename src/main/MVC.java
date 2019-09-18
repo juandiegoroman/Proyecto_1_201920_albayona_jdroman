@@ -11,17 +11,7 @@ public class MVC {
 	public static void main(String[] args)
 	{
 
-//		Controller controler = new Controller();
-//		controler.run();
-
-		MVCModelo mod = new MVCModelo();
-
-		mod.cargarDatosPorTrimiestre(1);
-		int[] a = mod.datosGrafica(0,50);
-
-		mod =null;
-
-
-
+		Controller controler = new Controller();
+		controler.run();
 	}
 }
