@@ -250,18 +250,17 @@ public class Controller {
                     System.out.format("%-5s %-1s %-10s" , "Hora", "|", "# de minutos" );
                     System.out.println();
                     
-                    int[] temp = modelo.datosGrafica(zonaOrigen, zonaDestino);
+                    int[] promedios = modelo.tiempoPromedioViajePorCadaHora(zonaOrigen, zonaDestino);
 
-                    for (int i = 0; i < temp.length; i++) {
+                    for (int i = 0; i < promedios.length; i++) {
 
                         String linea = "hora sin viajes";
 
-                        if(temp[i] > 0) linea = "";
+                        if(promedios[i] > 0) linea = "";
 
-                        for (int j = 0; j <  temp[i]; j++) {
+                        for (int j = 0; j <  promedios[i]; j++) {
                             linea+="*";
                         }
-
 
                         System.out.format("%-5s %-1s %-10s", String.format("%02d" , i) ,"|", linea);
 
@@ -280,13 +279,16 @@ public class Controller {
     private void printList(IListaIterador<Viaje> iter) {
         Viaje actual;
         System.out.println("----------------------------------------------------------------------------------------");
-        System.out.printf(" %10s  %20s  %20s %20s", "Origen", "Destino", "Tiempo promedio", "Desviación estandar");
+        System.out.printf("%3s %10s  %20s  %20s %20s", "#", "Origen", "Destino", "Tiempo promedio", "Desviación estandar");
         System.out.println();
         System.out.println("----------------------------------------------------------------------------------------");
+
+        int cont = 1;
         while (iter.haySiguiente()) {
             actual = iter.siguiente();
-            System.out.format("%10s  %20s  %20s %20s", actual.darIdOrigen(), actual.darIdDestino(), actual.darTiempoPromedio(), actual.darDesviacionEstandar());
+            System.out.format("%3s %10s  %20s  %20s %20s", cont, actual.darIdOrigen(), actual.darIdDestino(), actual.darTiempoPromedio(), actual.darDesviacionEstandar());
             System.out.println();
+            cont++;
         }
     }
 
