@@ -17,8 +17,8 @@ public class MVCView
 			System.out.println("1. Cargar los viajes para el trimiestre seleccionado.");
 			System.out.println("2. Tiempo promedio y desviacion estandar en rango indicado.");
 			System.out.println("3. Dar N viajes con mayor tiempo promedio.");
-			System.out.println("4. Comparar consultas de zona X con zona dada.");
-			System.out.println("5. Tabla ASCII.");
+			System.out.println("4. Comparar consultas en ambos sentidos.");
+			System.out.println("5. Generar  gráfica ASCII de tiempo promedio por cada hora.");
 		}
 
 		public void printMessage(String mensaje) {
